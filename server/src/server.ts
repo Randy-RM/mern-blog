@@ -1,10 +1,12 @@
-require("dotenv").config();
 import cors from "cors";
+import dotenv from "dotenv";
 import express, { Request, Response } from "express";
+import { logger } from "./middlewares";
 
 /**
  * -------------- GENERAL SETUP ----------------
  */
+dotenv.config();
 const app = express();
 const PORT = 8001;
 const corsOptions = {
@@ -24,6 +26,10 @@ app.use((req: Request, res: Response, next) => {
 /**
  * -------------- ROUTE ----------------
  */
+// logger middleware
+app.use(logger);
+// Imports all of the routes
+// from ./routes/index
 app.get("/api", (req, res, next) => {
   return res.json({ message: "Welcome to Express MVC Tuto API" });
 });
