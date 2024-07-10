@@ -17,6 +17,9 @@
     "server:build": "yarn workspace server build",
     "client:build": "yarn workspace server build"
   },
+  "resolutions": {
+    "string-width": "^4.1.0"
+  },
   "dependencies": {
     "concurrently": "^8.2.2"
   }

@@ -22,10 +22,20 @@ This repository is built with yarn workspaces and contains API Node.js Server an
 
 ## Packages
 
-- [x] Express.js
+### Frontend
+
 - [x] React
 - [x] React-dom
 - [x] React Router
+
+### Backend
+
+- [x] Express.js
+- [x] Mongodb
+- [x] Mongoose
+- [x] Dotenv
+- [x] Cors
+- [x] Colors
 
 <br />
 
@@ -66,7 +76,7 @@ cd mern-blog-yarn-monorepo
 **Step 3**
 ```sh
 # install required dependencies
-yarn add
+yarn install
 ```
 
 ### Application run commands
