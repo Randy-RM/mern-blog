@@ -1,0 +1,23 @@
+{
+  "name": "mern-blog-yarn-monorepo",
+  "version": "1.0.0",
+  "repository": "https://github.com/Randy-RM/mern-blog.git",
+  "author": "Randy-RM <randymuhema@gmail.com>",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace server dev\" \"yarn workspace client dev\"",
+    "server:dev": "yarn workspace server dev",
+    "client:dev": "yarn workspace client dev",
+    "build": "concurrently \"yarn workspace server build\" \"yarn workspace client build\"",
+    "server:build": "yarn workspace server build",
+    "client:build": "yarn workspace server build"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
