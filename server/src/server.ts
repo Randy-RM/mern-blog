@@ -8,9 +8,12 @@ import { logger } from "./middlewares";
  */
 dotenv.config();
 const app = express();
-const PORT = 8001;
+const PORT = process.env.PORT || 8000;
 const corsOptions = {
-  origin: "*", // [ `${process.env.API_HOST}${PORT}`,`${process.env.CLIENT_HOST}${PORT}`]
+  origin:
+    process.env.NODE_ENV === "production"
+      ? [`${process.env.API_HOST}`, `${process.env.CLIENT_HOST}`]
+      : "*",
 };
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,7 +34,7 @@ app.use(logger);
 // Imports all of the routes
 // from ./routes/index
 app.get("/api", (req, res, next) => {
-  return res.json({ message: "Welcome to Express MVC Tuto API" });
+  return res.json({ message: "Welcome to MERN blog yarn monorepo API" });
 });
 
 /**
