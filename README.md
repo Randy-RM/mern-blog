@@ -16,7 +16,8 @@ This repository is built with yarn workspaces and contains API Node.js Server an
 
 ### Note
 
-> This application is a simple MERN Blog with MVC API.
+> This application is a simple MERN Blog with MVC API.\
+> Frontend and Backend is mainly made with TypeScript programming language.
 
 <br />
 
@@ -27,6 +28,7 @@ This repository is built with yarn workspaces and contains API Node.js Server an
 - [x] React
 - [x] React-dom
 - [x] React Router
+- [x] Tailwindcss
 
 ### Backend
 
@@ -60,7 +62,7 @@ This repository is built with yarn workspaces and contains API Node.js Server an
 **Step 1**
 ```sh
 # clone repository
-git clone https://github.com/Randy-RM/mern-blog.git
+git clone https://github.com/Randy-RM/mern-blog-yarn-monorepo.git
 ```
 
 <br />
